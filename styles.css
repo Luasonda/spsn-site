@@ -204,6 +204,10 @@ h1{margin:14px 0 10px; font-size:2.55rem; line-height:1.08}
 .contact-grid{grid-template-columns: repeat(3, 1fr);}
 .copy-row{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:12px; padding-top:12px; border-top:1px solid rgba(232,242,242,.10)}
 
+/* Clients */
+.client-list{display:flex; flex-wrap:wrap; gap:12px}
+.client-item{border:1px solid var(--line); background: rgba(255,255,255,.03); padding:12px 14px; border-radius:14px; font-weight:600}
+
 @media (max-width: 920px){
   .hero-grid{grid-template-columns:1fr;}
   .grid{grid-template-columns:1fr;}
