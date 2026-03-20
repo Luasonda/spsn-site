@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact SPSN — ICT Support in Lusaka</title>
+  <meta name="description" content="Contact SPSN for ICT support, Microsoft 365 administration, MikroTik/pfSense networking, and cybersecurity services in Lusaka, Zambia (and remote)." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SPSN home">
+        <span class="brand-mark" aria-hidden="true">SPSN</span>
+        <span class="brand-sub">Systems, Protection, Support &amp; Networking</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a class="nav-active" href="contact.html">Contact</a>
+        <a class="btn btn-small" href="https://wa.me/260978518880" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Talk to SPSN</h1>
+        <p class="lead">Fastest channel is WhatsApp. If you prefer email, no problem.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid contact-grid">
+          <div class="card">
+            <h2 style="margin-top:0">WhatsApp</h2>
+            <p class="muted">Send: business name, number of users/devices, your main issue, and urgency.</p>
+            <a class="btn" href="https://wa.me/260978518880" target="_blank" rel="noopener">Message on WhatsApp</a>
+            <div class="copy-row">
+              <span class="muted">+260 978 518 880</span>
+              <button class="btn btn-ghost btn-small" data-copy="+260978518880">Copy</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 style="margin-top:0">Email</h2>
+            <p class="muted">If your request is detailed (scope / budget / timelines), email is better.</p>
+            <a class="btn" href="mailto:luasonda@gmail.com">Email luasonda@gmail.com</a>
+            <div class="copy-row">
+              <span class="muted">luasonda@gmail.com</span>
+              <button class="btn btn-ghost btn-small" data-copy="luasonda@gmail.com">Copy</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 style="margin-top:0">Coverage</h2>
+            <p class="muted">Based in Lusaka. Remote support available nationwide (and beyond) depending on scope.</p>
+            <ul class="ticks">
+              <li>On-site support: Lusaka</li>
+              <li>Remote support: Zambia + beyond</li>
+              <li>Security-first defaults</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>What to include in your message</h2>
+          <p class="muted">This helps me quote quickly and accurately.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><h3>Company details</h3><p class="muted">Business name, location, and working hours.</p></div>
+          <div class="card"><h3>Scope</h3><p class="muted">Number of users/devices, Microsoft 365 users, sites/branches.</p></div>
+          <div class="card"><h3>Urgency</h3><p class="muted">Is this a current outage, or planned work?</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-box">
+        <div>
+          <h2>Prefer WhatsApp?</h2>
+          <p class="muted">Tap below and send a quick brief.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://wa.me/260978518880" target="_blank" rel="noopener">WhatsApp SPSN</a>
+            <a class="btn btn-ghost" href="services.html">View services</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-row"><span class="label">Phone</span><span class="value">+260 978 518 880</span></div>
+          <div class="contact-row"><span class="label">Email</span><span class="value">luasonda@gmail.com</span></div>
+          <div class="contact-row"><span class="label">Location</span><span class="value">Lusaka</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">SPSN</div>
+        <div class="micro muted">Systems, Protection, Support &amp; Networking</div>
+      </div>
+      <div class="micro muted">© <span id="year"></span> SPSN</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy-to-clipboard helpers
+    document.querySelectorAll('[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const val = btn.getAttribute('data-copy');
+        try {
+          await navigator.clipboard.writeText(val);
+          const old = btn.textContent;
+          btn.textContent = 'Copied';
+          setTimeout(() => (btn.textContent = old), 900);
+        } catch (e) {
+          // Fallback
+          const ta = document.createElement('textarea');
+          ta.value = val;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          ta.remove();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

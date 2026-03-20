@@ -180,9 +180,37 @@ h1{margin:14px 0 10px; font-size:2.55rem; line-height:1.08}
 .footer-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
 .footer-brand{font-weight:800; letter-spacing:.10em}
 
+/* Page helpers */
+.page-hero{padding-top:38px; padding-bottom:10px}
+.nav-active{color: var(--text) !important}
+
+/* Lanes / packs */
+.lanes{grid-template-columns: repeat(3, 1fr);}
+.lane .ticks{margin:10px 0 14px}
+
+.packs{grid-template-columns: repeat(3, 1fr);}
+.pack-top{display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:8px}
+.pack-price{font-weight:700; color: var(--text); opacity: .92; white-space: nowrap}
+
+/* Proof cards */
+.proof{grid-template-columns: repeat(3, 1fr);}
+.proof p{margin:8px 0 0}
+
+/* Chips */
+.chips{display:flex; flex-wrap:wrap; gap:10px}
+.chip{border:1px solid var(--line); background: rgba(255,255,255,.03); padding:8px 10px; border-radius:999px; color: var(--muted); font-size:.92rem}
+
+/* Contact page */
+.contact-grid{grid-template-columns: repeat(3, 1fr);}
+.copy-row{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:12px; padding-top:12px; border-top:1px solid rgba(232,242,242,.10)}
+
 @media (max-width: 920px){
   .hero-grid{grid-template-columns:1fr;}
   .grid{grid-template-columns:1fr;}
+  .lanes{grid-template-columns:1fr;}
+  .packs{grid-template-columns:1fr;}
+  .proof{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
   .work-list{grid-template-columns:1fr;}
   .steps{grid-template-columns:1fr;}
   .cta-box{grid-template-columns:1fr;}
